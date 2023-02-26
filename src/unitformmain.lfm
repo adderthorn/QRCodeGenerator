@@ -1,7 +1,7 @@
 object FormMain: TFormMain
-  Left = 1167
+  Left = 85
   Height = 300
-  Top = 513
+  Top = 57
   Width = 297
   Caption = 'QR Code Generator'
   ClientHeight = 300
