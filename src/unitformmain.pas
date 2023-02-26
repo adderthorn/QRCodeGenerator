@@ -6,8 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  QlpIQrCode, QlpQrCode, QlpQrSegment, QlpQRCodeGenLibTypes, fpwritebmp,
-  fpreadbmp;
+  QlpIQrCode, QlpQrCode, QlpQrSegment, QlpQRCodeGenLibTypes;
 
 type
 
