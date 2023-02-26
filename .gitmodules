@@ -1,0 +1,3 @@
+[submodule "dep/QRCodeGenLib4Pascal"]
+	path = dep/QRCodeGenLib4Pascal
+	url = https://github.com/adderthorn/QRCodeGenLib4Pascal.git
