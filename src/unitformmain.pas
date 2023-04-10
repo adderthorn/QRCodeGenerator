@@ -18,8 +18,11 @@ type
     PanelTop: TPanel;
     PanelBottom: TPanel;
     Splitter: TSplitter;
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure MemoInputChange(Sender: TObject);
   private
+    QrBitmap: TQRCodeGenLibBitmap;
+    QrCode: IQrCode;
     procedure GenerateQR();
   public
 
@@ -38,18 +41,21 @@ begin
   GenerateQR();
 end;
 
+procedure TFormMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  FreeAndNil(QrBitmap);
+end;
+
 procedure TFormMain.GenerateQR;
 var
   InputText: String;
-  AQrCode: IQrCode;
-  ABitmap: TQRCodeGenLibBitmap;
   AnEncoding: TEncoding;
 begin
   InputText:=MemoInput.Lines.Text;
   AnEncoding:=TEncoding.UTF8;
-  AQrCode:=TQrCode.EncodeText(InputText, ECC_LEVEL, AnEncoding);
-  ABitmap:=AQrCode.ToBitmapImage(1, 1);
-  ImageQRCode.Picture.Assign(ABitmap);
+  QrCode:=TQrCode.EncodeText(InputText, ECC_LEVEL, AnEncoding);
+  QrBitmap:=QrCode.ToBitmapImage(1, 1);
+  ImageQRCode.Picture.Assign(QrBitmap);
 end;
 
 {$R *.lfm}

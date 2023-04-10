@@ -6,6 +6,7 @@ object FormMain: TFormMain
   Caption = 'QR Code Generator'
   ClientHeight = 300
   ClientWidth = 297
+  OnClose = FormClose
   Position = poDesktopCenter
   LCLVersion = '2.2.4.0'
   object PanelTop: TPanel

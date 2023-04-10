@@ -41,6 +41,7 @@
         <Filename Value="unitformmain.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormMain"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnitFormMain"/>
       </Unit>
